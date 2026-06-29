@@ -37,6 +37,23 @@ export function HeroSection() {
           33%       { transform: translateY(-14px) rotate(3deg); }
           66%       { transform: translateY(8px) rotate(-2deg); }
         }
+        @media (max-width: 768px) {
+          .hero-row-2 {
+            color: #111 !important;
+            -webkit-text-stroke: 0px transparent !important;
+            font-size: 20vw !important;
+            padding-left: 4vw !important;
+            padding-right: 4vw !important;
+          }
+          .hero-row-1 {
+            font-size: 20vw !important;
+            justify-content: center !important;
+            gap: 4vw !important;
+            padding-left: 4vw !important;
+            padding-right: 4vw !important;
+          }
+          .hero-photo { display: none !important; }
+        }
       `}</style>
 
       {FLOATING_LOGOS.map((logo, i) => (
@@ -81,22 +98,17 @@ export function HeroSection() {
         <span style={{ color: "var(--neon)" }}>VIBE</span>
       </div>
 
-      {/* Row 2: CODING — white stroke, same side padding as row 1 */}
+      {/* Row 2: CODING — styled via CSS class (allows mobile override) */}
       <div className="hero-row-2"
         style={{
-          fontSize: "22vw",
           fontWeight: 900,
           letterSpacing: "-0.03em",
           lineHeight: 0.86,
-          color: "transparent",
-          WebkitTextStroke: "3px #ffffff",
           zIndex: 10,
           userSelect: "none",
           pointerEvents: "none",
           textAlign: "center",
           width: "100%",
-          paddingLeft: "4vw",
-          paddingRight: "4vw",
         }}
       >
         CODING

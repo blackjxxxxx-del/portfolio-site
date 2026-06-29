@@ -244,21 +244,30 @@ a { color: inherit; text-decoration: none; }
   to   { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 .hero-row-1 { animation: hero-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both; }
+.hero-row-2 {
+  font-size: 22vw;
+  color: transparent;
+  -webkit-text-stroke: 3px #ffffff;
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
 
 /* ─── Hero mobile ──────────────────────────── */
 @media (max-width: 768px) {
   .hero-photo { display: none !important; }
   .hero-row-1 {
     font-size: 22vw !important;
-    justify-content: space-between !important;
-    padding-left: 6vw !important;
-    padding-right: 6vw !important;
-    gap: 0 !important;
+    justify-content: center !important;
+    gap: 6vw !important;
+    padding-left: 4vw !important;
+    padding-right: 4vw !important;
   }
   .hero-row-2 {
     font-size: 26vw !important;
     padding-left: 2vw !important;
     padding-right: 2vw !important;
+    color: #111 !important;
+    -webkit-text-stroke: 0px transparent !important;
   }
 }
 .hero-row-2 { animation: hero-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.22s both; }
